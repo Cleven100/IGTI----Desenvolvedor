@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <p id="a"> Click aqui</p>
+</body>
+<script>
+    let p = document.getElementById('a');
+
+    p.addEventListener('mousedown', (event) => event.target.innerHTML = "O mouse está preciosando", false);
+    p.addEventListener('mouseup', (event) => event.target.innerHTML = "O mouse não está precionado", false);
+    </script>
+</html>
