@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <button type="button">Click aqui</button>
+  </body>
+
+  <script>
+    let btn = document.querySelector('button');
+
+    btn.addEventListener(
+      'click',
+      showPosition,
+      false
+    );
+   
+
+  function showPosition( event ) {
+        alert("Posicao X é: " + event.screenX + "posicao Y: " + event.screenY);
+  }
+
+  </script>
+</html>
