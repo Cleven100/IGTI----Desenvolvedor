@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+
+    <input id="inp" value="Clique Aqui" type button>
+    <textarea id="txta"></textarea>
+    <input type="button" onclick="txt.value=''" value="Clear">
+    
+</body>
+
+ <script>
+   
+   let inp = document.getElementById('inp');
+
+   inp.addEventListener('mousedown', log);
+   inp.addEventListener('mouseup', log);
+   inp.addEventListener('click', log);
+   inp.addEventListener('contextmenu', log);
+   inp.addEventListener('contextmenu', log);
+   inp.addEventListener('dbclick', log);
+
+
+   function log(event) {
+       document.getElementById('txta').value += event.type + ' [target: ]'
+   }
+
+
+
+
+
+ </script>
+
+
+</html>
