@@ -19,8 +19,12 @@
 
       btn.addEventListener('click', alerta);
 
-    function  alerta(){
-          return window.alert("você clicou no botão");
+    function  alerta(event){
+           
+        let o_event = event ? event : window.event;
+        let mensagem = "Posicao X é: " + o_event.screenX;
+             
+          return window.alert(mensagem);
       }
  
 
