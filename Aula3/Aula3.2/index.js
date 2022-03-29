@@ -45,10 +45,48 @@ Promise.all([
 
 
 const p5 = Promise.race([
-    new Promise(resolve => setTimeout(resolve, 2000, "p10")),
-    new Promise((resolve, reject) => setTimeout(reject, 3000, "p20"))
+    new Promise(resolve => setTimeout(resolve, 3000, "p10")),
+    new Promise((resolve, reject) => setTimeout(reject, 2000, "p20")),
+    new Promise(resolve => setTimeout(resolve, 4000, "P13"))
 ])
 
-p5.them(result => console.log(result));
+p5.then(result => console.log(result));
 p5.catch(error => console.error(error));
+
+
+function getCarInfo(car) {
+    return new Promise((resolve, reject) =>{
+        setTimeout(() => resolve(`Car details: ${car}`), Math.floor(600*Math.random()))
+    })
+}
+
+function showStatus() {
+    console.log("Aguarde dados sendo carregados...");
+}
+
+function timeout(delay, result) {
+      return new Promise(resolve =>{
+          setTimeout(() => {
+              resolve(result)
+          }, delay);
+      });
+}
+
+function showCarInfo(car) {
+    return getCarInfo(car).then(info =>{
+        console.log(`Car info: ${car}`)
+        return true;
+    })
+}
+
+
+Promise.race([showCarInfo("Palio"), timeout(300)])
+.then(displayed => {
+       if(!displayed) {
+           showStatus()
+       } else {
+
+       }
+})
+
 
