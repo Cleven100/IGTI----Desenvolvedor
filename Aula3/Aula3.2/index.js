@@ -42,3 +42,13 @@ Promise.all([
 .then(size => console.info(size))
 .catch(erro => console.error(erro));
 
+
+
+const p5 = Promise.race([
+    new Promise(resolve => setTimeout(resolve, 2000, "p10")),
+    new Promise((resolve, reject) => setTimeout(reject, 3000, "p20"))
+])
+
+p5.them(result => console.log(result));
+p5.catch(error => console.error(error));
+
