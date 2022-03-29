@@ -47,3 +47,19 @@ p4.then( function acao1 (res) {console.log(`${res} da ação 1`); return res})
 .then( function acao2 (res) {console.log(`${res} da ação 2`); return res})
 .then( function acao3 (res) {console.log(`${res} da ação 3`); return res})
 .catch(function erro(rej) {console.error(rej)});
+
+
+const p5 = new Promise((resolve, reject) => {
+    if(Math.random() > 0.5) { 
+        resolve("Sucesso P5");
+    } else {
+        reject("FALHA P5");
+    }
+})
+
+
+p5.then( function acao1 (res) {console.log(`${res} da ação 1`); return res})
+.catch(function erro1 (rej) {console.error('erro no primeiro catch'); return rej})
+.then( function acao2 (res) {console.log(`${res} da ação 2`); return res})
+.then( function acao3 (res) {console.log(`${res} da ação 3`); return res})
+.catch(function erro(rej) {console.error(rej)});
