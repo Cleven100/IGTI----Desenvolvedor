@@ -44,10 +44,15 @@ const carModelAll = {
         }
 
         return {
-          value: "",
+          value: brands[currentBrandIndex][currentModelIndex++],
           done: false,
         };
       },
     };
   },
 };
+
+
+for(const car of carModelAll) {
+ console.log(car);
+}
