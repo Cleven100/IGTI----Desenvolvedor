@@ -33,3 +33,5 @@ tradutor["Marca"] = 4554541;
 
 console.log(tradutor['Modelo']);
 console.log(tradutor['Marca']);
+
+const hide = (target, prefix = '_');
