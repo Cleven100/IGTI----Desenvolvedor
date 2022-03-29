@@ -14,7 +14,7 @@ let handlerTradutor = {
     },
     set(target, property, value){
       if(typeof value == 'string'){
-          target[property] = value;
+         return Reflect.set(target,property,value);
       } else {
           return false;
       }
