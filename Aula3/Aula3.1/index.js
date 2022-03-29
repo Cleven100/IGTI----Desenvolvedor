@@ -78,3 +78,22 @@ p6.catch( function erro2 (rej) {console.error(rej)})
 p6.then( function acao1 (res) {console.log(`${res} da ação 1`); return res})
 .then( function acao2 (res) {console.log(`${res} da ação 2`); return res})
 .then( function acao3 (res) {console.log(`${res} da ação 3`); return res})
+
+
+
+const p7 = new Promise((resolve, reject) => {
+    if(Math.random() > 0.5) { 
+        resolve("Sucesso P7");
+    } else {
+        reject("FALHA P7");
+    }
+})
+
+p7.catch( function erro1(rej) {console.error("Erro no primeiro catch P7"); return})
+
+p7.then(function acao1(res) {console.log('Promesssa Rejeitada na ação1'); throw new Error('Erro'); })
+.catch(function erro2(rej) {console.error('Tratamento das rejeições em P7')})
+.then(function acao2(red) {console.log(`${res} da ação 3`); return red})
+.catch(function erro3(rej) {console.log('Tratamento das rejeições em acao2 e acao3')});
+
+
