@@ -22,3 +22,14 @@ let handlerTradutor = {
 };
 
 tradutor = new Proxy(tradutor, handlerTradutor);
+
+
+console.log(tradutor['Carro']);
+console.log(tradutor['Modelo']);
+
+tradutor["Modelo"] = "Model";
+tradutor["Marca"] = 4554541;
+
+
+console.log(tradutor['Modelo']);
+console.log(tradutor['Marca']);
