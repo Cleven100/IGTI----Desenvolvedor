@@ -34,4 +34,15 @@ tradutor["Marca"] = 4554541;
 console.log(tradutor['Modelo']);
 console.log(tradutor['Marca']);
 
-const hide = (target, prefix = '_');
+const hide = (target, prefix = '_') => new Proxy(target, {
+    has: (target, property) => (!property.startsWith(prefix) && property in target),
+    get: (target, property, receiver) => (property in receiver) ? target[property] : undefined,
+    ownKeys: (target) => Reflect.ownKeys(target)
+    .filter( property => (!property.startsWith(prefix) && typeof property != 'string' ))
+
+});
+
+
+
+
+
