@@ -7,9 +7,22 @@ if(true) {
 }
 
 console.log(v);
-console.log(x);
+
 
 
 const PI = 3.141595;
 
 console.log(PI);
+
+
+const Aluno = {
+    nome: "Bruno",
+    sobrenome: "Teixeira"
+}
+
+console.log(Aluno.nome);
+
+
+Aluno.nome = "Carlos";
+
+console.log(Aluno.nome);
