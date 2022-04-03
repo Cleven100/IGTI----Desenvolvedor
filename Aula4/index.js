@@ -36,3 +36,8 @@ var some = function(a, b) {
 function soma2(a,b) {
     return a + b;
 }
+
+
+let soma3 = (a, b) =>{
+    return a + b
+}
