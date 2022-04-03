@@ -62,4 +62,44 @@ const Aluno3 = {
 
 Aluno3.getAluno();
 
+function Carro(marca){
+    this.marca = marca;
+}
 
+Carro.prototype.getMarca = function a () {
+};
+
+class Carro {
+      constructor(marca){
+          this.marca = marca
+      }
+
+    getMarca () {
+        
+        return this.marca;
+    }
+}
+
+class Veiculo{
+    constructor (marca, modelo){
+        this.marca = marca;
+        this.modelo = modelo;
+    }
+    getMarca() {
+        return this.marca;
+    }
+    getModelo() {
+        return this.modelo;
+    }
+}
+
+class Carro extends Veiculo {
+    constructor(marca, modelo, estepe) {
+        super(marca, modelo);
+        this.estepe = estepe;
+    }
+    getInfo() {
+        return console.log( "Marca: " + super.getMarca() + ",  Modelo: ", super.getModelo()); 
+        
+    }
+}
