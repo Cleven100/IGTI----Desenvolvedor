@@ -26,3 +26,13 @@ console.log(Aluno.nome);
 Aluno.nome = "Carlos";
 
 console.log(Aluno.nome);
+
+
+
+var some = function(a, b) {
+    return a + b;
+}
+
+function soma2(a,b) {
+    return a + b;
+}
