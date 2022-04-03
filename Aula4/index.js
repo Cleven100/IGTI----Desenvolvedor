@@ -8,3 +8,8 @@ if(true) {
 
 console.log(v);
 console.log(x);
+
+
+const PI = 3.141595;
+
+console.log(PI);
