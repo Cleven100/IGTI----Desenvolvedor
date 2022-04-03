@@ -41,3 +41,25 @@ function soma2(a,b) {
 let soma3 = (a, b) =>{
     return a + b
 }
+
+let soma4 = (a,b) => a + b;
+
+
+let log = () => {console.log("Erro"); }
+
+
+const Aluno2 = {
+    nome: "ana",
+    getAluno: function () {return console.log(this)}
+}
+
+Aluno2.getAluno();
+
+const Aluno3 = {
+    nome: "Anan",
+    getAluno: () => {return console.log(Aluno3.nome)}
+}
+
+Aluno3.getAluno();
+
+
