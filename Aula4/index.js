@@ -157,3 +157,34 @@ var soma6 = function (a,b){
 
 
 let soma7 = (a = 1, b = 1) =>  a + b;
+
+
+function soma8(...valores) {
+    return valores.reduce((anterior, atual) => { return anterior + atual});
+
+}
+
+console.log(soma8(10,20,30,40))
+
+
+
+
+const aluno4 = {
+    nome: 'pedro',
+    idade: 27,
+    curso: 'matematica',
+    [Symbol.iterator] : function* (){
+        yield this.nome;
+        yield this.idade;
+        yield this.curso;
+    }
+}
+
+
+for(let prop of aluno4){
+    console.log(prop);
+}
+
+for(let prop in aluno4){
+    console.log(prop);
+}
