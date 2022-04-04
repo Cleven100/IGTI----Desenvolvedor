@@ -140,3 +140,20 @@ const{modelo, ano} = c1;
 
 console.log(modelo);
 console.log(ano);
+
+
+const printCarInfo = ({modelo, ano}) => console.log(`Modelo: ${modelo}, ano: ${ano}`);
+
+
+printCarInfo(c1);
+
+
+var soma6 = function (a,b){
+    if(a === undefined) a = 1;
+    if(b === undefined) b = 1;
+    return a+b;
+}
+
+
+
+let soma7 = (a = 1, b = 1) =>  a + b;
