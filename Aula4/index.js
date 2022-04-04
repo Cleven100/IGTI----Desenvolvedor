@@ -62,7 +62,7 @@ const Aluno3 = {
 
 Aluno3.getAluno();
 
-function Carro(marca){
+/* function Carro(marca){
     this.marca = marca;
 }
 
@@ -102,4 +102,15 @@ class Carro extends Veiculo {
         return console.log( "Marca: " + super.getMarca() + ",  Modelo: ", super.getModelo()); 
         
     }
-}
+} */
+
+
+
+
+var nome = "Maria";
+var idade = 19
+var curso = "computacao";
+
+var frase = `${nome} tem ${idade} e faz o ${curso} `;
+
+console.log(frase);
