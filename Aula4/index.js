@@ -114,3 +114,29 @@ var curso = "computacao";
 var frase = `${nome} tem ${idade} e faz o ${curso} `;
 
 console.log(frase);
+
+
+
+var carros = ["uno", "gold"];
+
+var car1 = carros[0];
+var car2 = carros[1];
+
+//ES6
+
+let [a,b] = ["uno", "gol", "onix"]
+
+console.log(a);
+console.log(b);
+
+[a, b] = [b,a];
+
+console.log(a);
+console.log(b);
+
+const c1 = {modelo: "Onix", ano: 2019}
+
+const{modelo, ano} = c1;
+
+console.log(modelo);
+console.log(ano);
