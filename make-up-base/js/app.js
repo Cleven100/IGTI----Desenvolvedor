@@ -2,11 +2,11 @@
 
 (async () => {
 
-let response = await fetch("../data/products.json");
-
-console.log(await response.json());
-
-})();
+  let response = await fetch("../data/products.json");
+  
+  console.log(await response.json());
+  
+  })();
 
 
 
