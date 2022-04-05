@@ -43,3 +43,12 @@ console.log(_.isNumber(a));
 console.log(_.isString(b));
 console.log(_.isArray(c));
 console.log(_.isObject(d));
+
+
+let numbers = [-4,-10,-2,0,1,2,3,5,6,8,10];
+console.log(_.min(numbers));
+console.log(_.max(numbers));
+
+console.log(_.sum(numbers));
+
+
