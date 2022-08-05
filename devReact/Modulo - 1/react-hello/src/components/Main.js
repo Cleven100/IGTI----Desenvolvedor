@@ -1,13 +1,11 @@
 import React from 'react'
 
-export default function Main() {
+export default function Main({children}) {
     const name = 'test';
     const age = '52'
     return (
-        <main>
-            <div className="container mx-auto p-4">
-                <p>O seu nome é {name} e possui {age} anos</p>
-            </div>
+        <main className="container mx-auto p-4">
+            {children}
         </main>
     )
 }
