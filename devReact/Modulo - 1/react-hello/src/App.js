@@ -1,28 +1,36 @@
 import { useState } from 'react';
 import Header from './components/Header';
 import Main from './components/Main';
+import TextInput from './components/TextInput'
+import DateInput from './components/DateInput'
 
 export default function App() {
 
   const [name, setName] = useState('Cleven');
+  const [birthDate, setBirthDate] = useState('2021-04-30');
 
-  function handleNameChange(event) {
-    const newName = event.currentTarget.value;
+  function handleNameChange(newName) {
     setName(newName)
   }
+
+  function handleBirthDateChange(newDate) {
+    setBirthDate(newDate)
+  }
+
 
   return (
     <>
       <Header size="large">Component Header - hello-react</Header>
       <Main>
-        <div className="flex flex-col my-4">
-          <label className="text-sm mb-1" htmlFor="inputName">Digite o seu nome: </label>
-          <input autoFocus id="inputName" className="border p-1" type="text" value={name} onChange={handleNameChange}/>
-        </div>
-
+       <TextInput  labelDescription="Digite o seu nome: " inputValue={name} onInputChange={handleNameChange}/>
         <p>Meu nome é {name}</p>
+        <DateInput labelDescription="Digite a sua data de nascimento"
+        inputValue={birthDate} 
+        onInputChange={handleBirthDateChange}
+        />
       </Main>
-
+      
+ 
     </>
   )
 }
